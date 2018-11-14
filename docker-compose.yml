@@ -9,7 +9,7 @@ services:
     container_name: promethus
     restart: always
     volumes:
-      ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       9090:9090
       
