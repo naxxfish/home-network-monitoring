@@ -20,7 +20,7 @@ services:
        - 3010:3000
     volumes:
       - grafana-storage:/var/lib/grafana
-    env:
+    environment:
       GF_SERVER_ROOT_URL: https://grafana.home.naxxfish.net/
       GF_SECURITY_ADMIN_PASSWORD__FILE: /run/secrets/GF_SECURITY_ADMIN_PASSWORD
   
@@ -29,6 +29,6 @@ services:
     container_name: prometheus-mikrotik-exporter
     volumes:
       - ./prometheus-mikrotik-exporter/config.yml:/etc/config.yml
-    env:
+    environment:
       CONFIG_FILE: /etc/config.yml
 
