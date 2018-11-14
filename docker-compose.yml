@@ -5,8 +5,8 @@ volumes:
 
 services:
   prometheus:
-    image: prom/promethus
-    container_name: promethus
+    image: prom/prometheus
+    container_name: prometheus
     restart: always
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
